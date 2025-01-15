@@ -2,26 +2,26 @@ export const services = [
   {
     service: "Lorem Ipsum",
     icon: "fa-comment-dots",
-    content: ""
+    content: "Lorem ipsum dolor sit amet, consec tetur adipiscing elitsed do eiusmod"
   },
   {
     service: "Lorem Ipsum",
     icon: "fa-calculator",
-    content: ""
+    content: "Lorem ipsum dolor sit amet, consec tetur adipiscing elitsed do eiusmod"
   },
   {
     service: "Lorem Ipsum",
     icon: "fa-user",
-    content: ""
+    content: "Lorem ipsum dolor sit amet, consec tetur adipiscing elitsed do eiusmod"
   },
   {
     service: "Lorem Ipsum",
     icon: "fa-phone",
-    content: ""
+    content: "Lorem ipsum dolor sit amet, consec tetur adipiscing elitsed do eiusmod"
   },
   {
     service: "Lorem Ipsum",
     icon: "fa-phone",
-    content: ""
+    content: "Lorem ipsum dolor sit amet, consec tetur adipiscing elitsed do eiusmod"
   }
 ]

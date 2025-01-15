@@ -12,6 +12,7 @@ function App() {
       key={nanoid()}
       service={service.service}
       icon={service.icon}
+      content={service.content}
     />
   })
 
@@ -19,7 +20,11 @@ function App() {
     <>
       <Nav />
       <Hero />
+
+      <div className='services'>
+
       {servicios}
+      </div>
     </>
   )
 }
