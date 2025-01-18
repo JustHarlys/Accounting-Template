@@ -3,7 +3,7 @@
 function Nav() {
   return (
     <div className="nav">
-      <p>Accounting</p>
+      <p>Accounting Template</p>
 
       <ul className="nav-items">
         <li className="nav-item">Home</li>

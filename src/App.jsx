@@ -3,6 +3,9 @@ import Hero from './Components/Hero'
 import { services } from './data/services'
 import Services from './Components/Services'
 import { nanoid } from 'nanoid'
+import AboutUs from './Components/AboutUs'
+import OurTeam from './Components/OurTeam'
+import { wholeTeam } from './data/teamMembers'
 import './App.css'
 
 function App() {
@@ -16,6 +19,15 @@ function App() {
     />
   })
 
+  const team = wholeTeam.map((member) => {
+    return <OurTeam
+    key={nanoid()}
+    position={member.position}
+    img={member.img}
+    name={member.name}
+    />
+  })
+
   return (
     <>
       <Nav />
@@ -25,6 +37,12 @@ function App() {
 
       {servicios}
       </div>
+
+      <div className='our-team'>
+        {team}
+      </div>
+
+      <AboutUs />
     </>
   )
 }

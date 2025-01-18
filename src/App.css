@@ -14,7 +14,7 @@
 }
 
 .head {
-  height: 70vh; 
+  height: 82vh; 
   overflow: hidden; 
   position: relative;
 }
@@ -82,7 +82,7 @@ figure {
   }
   41.66% {
     opacity: 0;
-    transform: scale(1.1); /* Zoom suave al salir */
+    transform: scale(1.1); 
   }
   100% {
     opacity: 0;
@@ -90,7 +90,6 @@ figure {
   }
 }
 
-/* Texto dentro del hero */
 .hero h1 {
   color: #fff;
   font-size: 3rem;
@@ -120,6 +119,7 @@ figure {
 
 .services {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .service {
@@ -139,6 +139,10 @@ figure {
   background-color: var(--background);
 }
 
+.service:last-child {
+  border: none;
+}
+
 
 .service > i {
   font-size: 35px;
@@ -156,6 +160,7 @@ figure {
 .read-more {
   opacity: 0; 
   cursor: pointer;
+  height: 20px;
 }
 
 .read-more:after {
@@ -186,5 +191,39 @@ figure {
   100% {
     opacity: 1;
   }
+}
+
+.about-us-container {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+}
+
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+}
+
+.about-us-container > img {
+  width: 500px;
+}
+
+.about-us-container > .about-us-text > button {
+  background-color: var(--unblue);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+.about-us-container > .about-us-text > button:hover {
+  background-color: var(--dc);
+
 }
 
