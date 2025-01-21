@@ -20,7 +20,7 @@ function Services({service, icon, content}) {
 
       <p style={{marginBottom: 20, fontWeight: 'bold'}}>{service}</p>
       <p style={{marginBottom: 20}}>{content}</p>
-      <p className={readMore ? "read-more fade-in" : "read-more"}>{readMore && 'Read Moree'}</p>
+      <p className={readMore ? "read-more fade-in" : "read-more"}>{readMore && 'Read More'}</p>
       </div>
     </div>
   )

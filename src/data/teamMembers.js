@@ -1,27 +1,44 @@
+import member from '../assets/member.png';
+
 export const wholeTeam = [
   {
     name: "Harlys Almanzar",
-    img: "",
-    position: "Consultant Manager"
+    img: member,
+    position: "Consultant Manager",
+    linkedin: "",
+    instagram: "",
+    facebook: ""
   },
   {
     name: "George Michael",
-    img: "",
-    position: "Assistant Manager"
+    img: member,
+    position: "Assistant Manager",
+    linkedin: "",
+    instagram: "",
+    facebook: ""
   },
   {
     name: "Jorge Mateo",
-    img: "",
-    position: "Designer"
+    img: member,
+    position: "Designer",
+    linkedin: "",
+    instagram: "",
+    facebook: ""
   },
   {
     name: "Matias Encarnacion",
-    img: "",
-    position: "System Developer"
+    img: member,
+    position: "System Developer",
+    linkedin: "",
+    instagram: "",
+    facebook: ""
   },
   {
     name: "Carlos Polanco",
-    img: "",
-    position: "Finantial Analyst"
+    img: member,
+    position: "Finantial Analyst",
+    linkedin: "",
+    instagram: "",
+    facebook: ""
   }
 ];

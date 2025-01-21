@@ -4,8 +4,7 @@ import { services } from './data/services'
 import Services from './Components/Services'
 import { nanoid } from 'nanoid'
 import AboutUs from './Components/AboutUs'
-import OurTeam from './Components/OurTeam'
-import { wholeTeam } from './data/teamMembers'
+import OurTeamSlider from './Components/OurTeamSlider'
 import './App.css'
 
 function App() {
@@ -19,14 +18,6 @@ function App() {
     />
   })
 
-  const team = wholeTeam.map((member) => {
-    return <OurTeam
-    key={nanoid()}
-    position={member.position}
-    img={member.img}
-    name={member.name}
-    />
-  })
 
   return (
     <>
@@ -38,11 +29,12 @@ function App() {
       {servicios}
       </div>
 
+      <AboutUs />
+      
       <div className='our-team'>
-        {team}
+        <OurTeamSlider />
       </div>
 
-      <AboutUs />
     </>
   )
 }

@@ -115,6 +115,12 @@ figure {
   list-style-type: none;
   color: #6491DE;
   font-weight: bold;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: var(--dc);
 }
 
 .services {
@@ -224,6 +230,97 @@ figure {
 
 .about-us-container > .about-us-text > button:hover {
   background-color: var(--dc);
+}
 
+.our-team {
+  display: flex;
+  text-align: center;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.our-team-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--dc);
+  padding: 50px;
+  border-radius: 500px;
+  transition: 0.5s ease all;
+}
+
+.our-team-inner:hover {
+  background-color: var(--background);
+}
+
+.our-team-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.our-team-slider-inner {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  opacity: 1;
+}
+
+.indicators {
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.5s;  
+}
+
+.dot.active {
+  background-color: var(--dc);
+}
+
+.slider-btn {
+  padding: 10px;
+  color: var(--unblue);
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+  font-size: 50px;
+}
+
+.slider-btn:hover {
+  color: var(--dc);
+}
+
+.our-team-social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.our-team-social-media > a > i {
+  font-size: 20px;
+  transition: 0.5s ease all;
+}
+
+.fa-instagram {
+  color: #E1306C;
+}
+
+.fa-facebook {
+  color: #3B5998;
+}
+
+.fa-linkedin {
+  color: #0A66C2;
 }
 
