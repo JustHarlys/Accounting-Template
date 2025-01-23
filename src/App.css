@@ -27,6 +27,16 @@
   overflow: hidden;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
 
 .hero {
   position: relative;
@@ -203,6 +213,29 @@ figure {
   display: flex;
   padding: 50px;
   gap: 40px;
+  
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+
+  animation: slideIn 1s ease-out forwards;
+}
+
+.about-us-container.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .about-us-text {
@@ -324,3 +357,37 @@ figure {
   color: #0A66C2;
 }
 
+.numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+  padding: 80px;
+}
+
+.numbers > * {
+  margin: 0;
+
+}
+
+.data-number {
+  display: flex;
+  background-color: #073D7F;
+  padding: 100px 40px 100px 40px;
+  border-radius: 10px;
+}
+
+.data-number:not(:first-child):not(:last-child) {
+  transform: scale(1.4);
+}
+
+.data-number-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.data-number-inner > p {
+  font-size: 30px;
+  color: white;
+}

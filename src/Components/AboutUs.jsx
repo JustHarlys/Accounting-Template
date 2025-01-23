@@ -3,7 +3,7 @@ import aboutUs from '../assets/about-us.jpg'
 function AboutUs() {
   return (
     <div className="about-us-container">
-        <img src={aboutUs} alt="About us picture" />
+        <img src={aboutUs} alt="About us picture" loading='laz'/>
 
         <div className='about-us-text'>
 

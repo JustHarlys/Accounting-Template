@@ -4,6 +4,7 @@ function Hero() {
   return (
     <div className="head">
     <div className="pic-wrapper">
+      <div className="overlay"></div>
       <figure className="pic-1"></figure>
       <figure className="pic-2"></figure>
       <figure className="pic-3"></figure>
