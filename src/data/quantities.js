@@ -1,14 +1,14 @@
 export const numbers = [
   {
     data: "Testimonios",
-    number: 25
+    number:80
   },
   {
     data: "Clientes",
-    number: 13
+    number: 100
   },
   {
     data: "Proyectos",
-    number: 40
+    number: 120
   }
 ]

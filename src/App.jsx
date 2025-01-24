@@ -7,6 +7,8 @@ import AboutUs from './Components/AboutUs'
 import OurTeamSlider from './Components/OurTeamSlider'
 import Counter from './Components/Counter'
 import { numbers } from './data/quantities'
+import { preguntas } from './data/faq'
+import FAQ from './Components/FAQ'
 import './App.css'
 
 function App() {
@@ -27,6 +29,14 @@ function App() {
     number={number.number}
     />
   })
+
+  const preguntasFaq = preguntas.map((pregunta) => {
+    return <FAQ
+    key={nanoid()}
+    question={pregunta.question}
+    answer={pregunta.answer}
+    />
+  }) 
 
 
   return (
@@ -50,6 +60,10 @@ function App() {
       </div>
 
 
+      <div className='faq'>
+        <h1>FAQ</h1>
+        {preguntasFaq}
+      </div>
 
 
 

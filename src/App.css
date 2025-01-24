@@ -391,3 +391,17 @@ figure {
   font-size: 30px;
   color: white;
 }
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--background);
+  width: 100%;
+}
+
+.faq-inner {
+  padding: 5px;
+  width: 100%;
+  border-bottom: 1px solid var(--dc);
+}
