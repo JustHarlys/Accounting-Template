@@ -217,6 +217,7 @@ figure {
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
+  background-color: var(--background);
 
   animation: slideIn 1s ease-out forwards;
 }
@@ -394,14 +395,76 @@ figure {
 
 .faq {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   background-color: var(--background);
+  margin: auto;
+  padding: 20px;
   width: 100%;
 }
 
 .faq-inner {
-  padding: 5px;
-  width: 100%;
+  display: flex;
   border-bottom: 1px solid var(--dc);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  height: 100px;
+}
+
+.questions {
+  font-size: 14px;
+  width: 50%;
+}
+
+.faq-inner > p {
+  text-align: center;
+}
+
+.rotate-down {
+  transform: rotate(180deg);
+}
+
+.active {
+  background-color: var(--dc);
+}
+
+.answer {
+  width: 70%;
+  text-align: center;
+}
+
+.faq-inner-question-arrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fa-arrow-down {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  background-color: var(--unblue);
+  border-radius: 200px;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+
+.fa-arrow-down:hover {
+  background-color: var(--dc);
+}
+
+.fa-arrow-down.rotate-down {
+  background-color: var(--dc);
+}
+
+.fa-arrow-down:active {
+  background-color: var(--dc);
+}
+
+.faq-inner:last-child {
+  border: none;
 }

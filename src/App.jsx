@@ -10,6 +10,7 @@ import { numbers } from './data/quantities'
 import { preguntas } from './data/faq'
 import FAQ from './Components/FAQ'
 import './App.css'
+import faqimg from './assets/faq.jpg'
 
 function App() {
 
@@ -60,13 +61,17 @@ function App() {
       </div>
 
 
-      <div className='faq'>
-        <h1>FAQ</h1>
+        <h1 style={{textAlign: 'center' }}>FAQ</h1>
+      <section className='faq'>
+
+        <img src={faqimg} alt="Imagen de preguntas" width={600} style={{borderRadius: 10}}/>
+
+        <div className='questions'>
+
+
         {preguntasFaq}
-      </div>
-
-
-
+        </div>
+      </section>
     </>
   )
 }
