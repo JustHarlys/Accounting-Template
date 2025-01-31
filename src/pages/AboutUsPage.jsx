@@ -1,7 +1,12 @@
+import Nav from "../Components/Nav"
 
 function AboutUsPage() {
   return (
-    <div></div>
+    <>
+      <Nav />
+
+      
+    </>
   )
 }
 

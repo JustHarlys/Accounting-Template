@@ -5,6 +5,7 @@
   --unblue: #6491DE;
   --dc: #073D7F;
   --background: #F1F6FB;
+  --second-background: #90c1eb;
 }
 
 * {
@@ -127,6 +128,10 @@ figure {
   font-weight: bold;
   transition: 0.5s ease all;
   cursor: pointer;
+}
+
+.nav-items > a {
+  text-decoration: none;
 }
 
 .nav-item:hover {
@@ -285,7 +290,7 @@ figure {
 }
 
 .our-team-inner:hover {
-  background-color: var(--background);
+  background-color: var(--second-background);
 }
 
 .our-team-slider {
@@ -398,7 +403,7 @@ figure {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: var(--background);
+  background: linear-gradient(#ffffff, var(--second-background));
   margin: auto;
   padding: 20px;
   width: 100%;
