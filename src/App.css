@@ -473,3 +473,44 @@ figure {
 .faq-inner:last-child {
   border: none;
 }
+
+.founder-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: var(--background);
+}
+
+.founder-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+.principios-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+  padding: 40px;
+}
+
+.principio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  border-right: 1px solid var(--dc);
+  padding: 50px;
+  gap: 100px;
+}
+
+.principio:last-child {
+  border: none;
+}
+
