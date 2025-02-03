@@ -487,7 +487,7 @@ figure {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 
@@ -495,22 +495,113 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px;
+}
 
-  gap: 40px;
+.card {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:not(:first-child):not(:last-child) {
+  height: 400px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurecer la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.content {
+  padding: 10px;
+  background: var(--background);
+}
+
+.timeline-container {
+  background-color: var(--background);
   padding: 40px;
 }
 
-.principio {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  border-right: 1px solid var(--dc);
-  padding: 50px;
-  gap: 100px;
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
-.principio:last-child {
-  border: none;
+.timeline-item {
+  position: relative;
+  padding: 20px;
+  border-left: 4px solid #4a90e2;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.timeline-item:hover {
+  filter: drop-shadow(0 0 1em var(--dc));
+  transition: 0.5s;
+
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: #4a90e2;
+  border-radius: 50%;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}

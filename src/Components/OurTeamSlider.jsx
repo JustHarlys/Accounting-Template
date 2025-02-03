@@ -21,7 +21,7 @@ function OurTeamSlider() {
 
 
   return (
-    <div className="our-team-slider">
+    <div className="our-team-slider" style={{padding: 50}}>
 
         <h1>Nuestro equipo</h1>
 
