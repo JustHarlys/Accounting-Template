@@ -15,7 +15,7 @@
 }
 
 .head {
-  height: 82vh; 
+  height: 99vh; 
   overflow: hidden; 
   position: relative;
 }
@@ -626,4 +626,9 @@ figure {
   height: 100%;
   padding: 20px;
 
+}
+
+.inner-general-services > i {
+  font-size: 50px;
+  color: var(--dc);
 }
