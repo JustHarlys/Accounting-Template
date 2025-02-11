@@ -15,6 +15,7 @@ import WhatsappChatBot from '../Components/WhatsappChatBot'
 import Chat from '../Components/Chat'
 import { useContext } from 'react'
 import { BotContext } from '../Context/BotToggle'
+import building from '../assets/numberBuildings.jpg'
 
 function Home() {
 
@@ -29,11 +30,13 @@ function Home() {
     />
   })
 
-  const numeros = numbers.map(number => {
+  const numeros = numbers.map((number, index) => {
     return <Counter 
     key={nanoid()}
     data={number.data}
     number={number.number}
+    index={index}
+    div={number.div}
     />
   })
 
@@ -60,10 +63,8 @@ function Home() {
 
       <div className='numbers'>
       {numeros}
-      </div>
-      
-      <div className='our-team'>
-        <OurTeamSlider />
+
+      <img src={building} alt="" width={600}/>
       </div>
 
 

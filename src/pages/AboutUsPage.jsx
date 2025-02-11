@@ -11,12 +11,14 @@ import WhatsappChatBot from "../Components/WhatsappChatBot"
 import Chat from "../Components/Chat"
 import { useContext } from "react"
 import { BotContext } from "../Context/BotToggle"
+import { dataValues } from "../data/values"
+import Values from '../Components/Values'
 
 const events = [
-  { title: "Fundación de la Empresa", date: "2018", description: "Iniciamos nuestra aventura en el mundo del desarrollo." },
-  { title: "Primer Gran Proyecto", date: "2019", description: "Lanzamos nuestro primer software exitoso." },
-  { title: "Expansión Internacional", date: "2021", description: "Abrimos oficinas en varios países." },
-  { title: "Innovación y Crecimiento", date: "2023", description: "Lideramos en tecnología y desarrollo de software." }
+  { title: "Fundación de la Empresa", date: "2018", description: "Iniciamos nuestra aventura en el mundo del desarrollo."},
+  { title: "Primer Gran Proyecto", date: "2019", description: "Lanzamos nuestro primer software exitoso."},
+  { title: "Expansión Internacional", date: "2021", description: "Abrimos oficinas en varios países."},
+  { title: "Innovación y Crecimiento", date: "2023", description: "Lideramos en tecnología y desarrollo de software."}
 ];
 
 
@@ -26,7 +28,15 @@ const principiosData = principios.map(principio => {
     key={nanoid()}
     name={principio.name}
     content={principio.content}
-    img={principio.img}
+  />
+})
+
+const valores = dataValues.map(valor => {
+  return <Values 
+  key={nanoid()}
+  nombre={valor.nombre}
+  descripcion={valor.descripcion}
+  img={valor.img}
   />
 })
 
@@ -44,6 +54,11 @@ function AboutUsPage() {
 
       <section className="principios-container">
         {principiosData}
+      </section>
+
+      <h1 style={{textAlign: "center"}}>Valores</h1>
+      <section className="valores-container">
+        {valores}
       </section>
 
       <div className="founder-container">

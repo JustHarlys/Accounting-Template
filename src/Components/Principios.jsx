@@ -1,20 +1,12 @@
 
 
-function Principios({ name, content, img }) {
+function Principios({ name, content}) {
   return (
-    <div className="card">
-      {/* Imagen de fondo con overlay */}
-      <div className="image-container">
-        <img src={img} alt={name} className="background-image" />
-        <div className="overlay">
-          <h1 className="title">{name}</h1>
+    <div className="principios-container">
+        <div className="vision-mission">
+            <h1>{name}</h1>
+            <p>{content}</p>
         </div>
-      </div>
-
-      {/* Contenido debajo de la imagen */}
-      <div className="content">
-        <p>{content}</p>
-      </div>
     </div>
   );
 }

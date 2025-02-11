@@ -6,10 +6,10 @@ function Nav() {
       <p>Accounting Template</p>
 
       <ul className="nav-items">
-        <Link to="/"><li className="nav-item">Home</li></Link>
-        <Link to="/about"><li className="nav-item">About us</li></Link>
-        <Link to="/services"><li className="nav-item">Services</li></Link>
-        <Link to="/contact"><li className="nav-item">Contact</li></Link>
+        <Link to="/"><li className="nav-item">Inicio</li></Link>
+        <Link to="/about"><li className="nav-item">Sobre Nosotros</li></Link>
+        <Link to="/services"><li className="nav-item">Servicios</li></Link>
+        <Link to="/contact"><li className="nav-item">Contacto</li></Link>
       </ul>
     </div>
   )
