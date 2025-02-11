@@ -7,6 +7,10 @@ import { nanoid } from "nanoid"
 import WhoAreWe from "../Components/WhoAreWe"
 import OurTeamSlider from "../Components/OurTeamSlider"
 import Timeline from "../Components/Timeline"
+import WhatsappChatBot from "../Components/WhatsappChatBot"
+import Chat from "../Components/Chat"
+import { useContext } from "react"
+import { BotContext } from "../Context/BotToggle"
 
 const events = [
   { title: "Fundación de la Empresa", date: "2018", description: "Iniciamos nuestra aventura en el mundo del desarrollo." },
@@ -27,6 +31,9 @@ const principiosData = principios.map(principio => {
 })
 
 function AboutUsPage() {
+
+  const {toggle} = useContext(BotContext)
+
   return (
     <>
       <Nav />
@@ -61,6 +68,8 @@ function AboutUsPage() {
         <h1 style={{textAlign: "center"}}>Nuestra Historia</h1>
         <Timeline events={events} />
       </div>
+
+      {toggle ? <Chat /> : <WhatsappChatBot />}
 
     </>
   )

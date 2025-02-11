@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.chat-container {
+  width: 300px;
+  height: 470px;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/wsp-background.jpg);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.chat-head {
+  background-color: #005C4B;
+  height: 50px;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+.bot-name {
+  color: white;
+  font-size: 18px;
+  display: flex;
+  padding: 11px;
+  align-items: center;
+  font-family: 'Montserrat';
+}
+
+.close-btn {
+  color: white;
+  cursor: pointer;
+}
+
+.message {
+  clear: both;
+  line-height: 18px;
+  padding: 10px;
+  position: relative;
+  margin: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+  z-index: 1;
+  overflow: visible;  /* Permite que el tick se vea */
+}
+
+.sender {
+  background-color: white;
+  border-radius: 8px 8px 8px 0;
+  float: left;
+  position: relative;
+  padding: 10px;
+}
+
+.sender::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.receptor {
+  border-radius: 8px 8px 0 8px;
+  float: right;
+  background-color: #E1FFC7;
+  position: relative;
+  padding: 10px;
+}
+
+.receptor::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #E1FFC7;
+}
+
+.text-bar {
+  background-color: white;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 374px;
+  cursor: auto;
+  width: 96%;
+}
+
+.text-bar-text {
+  padding: 10px;
+  color: rgb(176, 145, 145);
+}

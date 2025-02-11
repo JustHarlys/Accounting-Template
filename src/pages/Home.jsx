@@ -11,8 +11,14 @@ import { preguntas } from '../data/faq'
 import FAQ from '../Components/FAQ'
 import '../App.css'
 import faqimg from '../assets/faq.jpg'
+import WhatsappChatBot from '../Components/WhatsappChatBot'
+import Chat from '../Components/Chat'
+import { useContext } from 'react'
+import { BotContext } from '../Context/BotToggle'
 
 function Home() {
+
+  const {toggle} = useContext(BotContext)
 
   const servicios = services.map((service) => {
     return <Services 
@@ -72,6 +78,9 @@ function Home() {
         {preguntasFaq}
         </div>
       </section>
+
+      {toggle ? <Chat /> : <WhatsappChatBot />}
+
     </>
   )
 }
