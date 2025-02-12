@@ -50,16 +50,21 @@ function AboutUsPage() {
 
       <Hero />
 
-      <WhoAreWe />
-
+      
       <section className="principios-container">
         {principiosData}
       </section>
 
-      <h1 style={{textAlign: "center"}}>Valores</h1>
+      <h1 style={{textAlign: "center", marginTop: 20}}>Valores</h1>
       <section className="valores-container">
         {valores}
       </section>
+
+      <WhoAreWe />
+
+  
+
+
 
       <div className="founder-container">
         <img src={founder} alt="" width={250}/>

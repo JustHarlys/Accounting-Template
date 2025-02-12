@@ -481,6 +481,7 @@ figure {
   display: flex;
   padding: 40px;
   font-size: 18px;
+  background-color: var(--background);
 }
 
 .principios-container > .vision-mission h1 {
@@ -491,7 +492,7 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 45px;
+  padding: 40px;
   gap: 30px;
 }
 

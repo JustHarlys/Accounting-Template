@@ -1,9 +1,10 @@
 import aboutUs from '../assets/about-us.jpg'
+import template from '../assets/template.jpg'
 
 function WhoAreWe() {
   return (
     <div className="about-us-container">
-        <img src={aboutUs} alt="About us picture" loading='lazy' style={{borderRadius: 20}}/>
+        <img src={template} alt="About us picture" loading='lazy' style={{borderRadius: 20}} width={400}/>
 
         <div className='about-us-text'>
 
