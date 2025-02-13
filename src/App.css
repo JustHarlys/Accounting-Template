@@ -4,6 +4,7 @@
   --white: #F1F1F1;
   --unblue: #6491DE;
   --dc: #073D7F;
+  --dc2: #052e60;
   --background: #F1F6FB;
   --second-background: #90c1eb;
 }
@@ -39,15 +40,38 @@
 
 .hero {
   position: relative;
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   z-index: 10;
   color: white;
   text-align: center;
+  align-items: center;
+  gap: 40px;
 }
+
+.hero > * {
+  margin: 0;
+}
+
+.hero > button {
+  padding: 20px;
+  width: 20%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--unblue);
+  color: white;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+
+.hero > button:hover {
+  background-color: var(--dc2);
+}
+
+
 
 /* Slideshow */
 figure {
@@ -95,12 +119,34 @@ figure {
   z-index: 20;
 }
 
+.over-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: var(--dc2);
+  color: white;
+  align-items: center;
+}
+
+.fa-instagram{
+  color: white;
+}
+
+.over-nav > * {
+  margin: 0;
+
+}
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: var(--white);
+  background-color: #fff;
+
+  /* Sombra más visible solo en la parte inferior */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav-items {
@@ -112,7 +158,7 @@ figure {
 .nav-item {
   list-style-type: none;
   color: #6491DE;
-  font-weight: bold;
+  font-weight: 500;
   transition: 0.5s ease all;
   cursor: pointer;
 }
@@ -276,42 +322,6 @@ figure {
 }
 
 
-.our-team {
-  display: flex;
-  text-align: center;
-  gap: 40px;
-  padding: 40px;
-  justify-content: center;
-}
-
-.our-team-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  border: 1px solid var(--dc);
-  padding: 50px;
-  border-radius: 500px;
-  transition: 0.5s ease all;
-}
-
-.our-team-inner:hover {
-  background-color: var(--second-background);
-}
-
-.our-team-slider {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.our-team-slider-inner {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  opacity: 1;
-}
-
 .indicators {
   margin-top: 10px;
 }
@@ -356,9 +366,6 @@ figure {
   transition: 0.5s ease all;
 }
 
-.fa-instagram {
-  color: #E1306C;
-}
 
 .fa-facebook {
   color: #3B5998;
@@ -520,6 +527,22 @@ figure {
   text-align: center;
 }
 
+.nuestro-equipo {
+  padding: 100px;
+
+}
+
+.our-team-inner {
+  display: flex;
+  padding: 50px;
+  gap: 300px;
+}
+
+.member-text > p {
+  white-space: pre-line;
+  margin-top: 20px;
+}
+
 .timeline-container {
   background-color: var(--background);
   padding: 40px;
@@ -596,7 +619,7 @@ figure {
   width: 100%;
   height: 100%;
   padding: 20px;
-  transition: 0.5s ease all transform;
+  transition: 0.5s ease all;
 }
 
 .inner-general-services:hover {
@@ -611,4 +634,67 @@ figure {
 
 .inner-general-services > i:hover {
   transform: scale(1.1);
+}
+
+.inner-service-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--second-background);
+  transition: 0.5s ease all;
+  color: white;
+  cursor: pointer;
+}
+
+.inner-service-btn:hover {
+  background-color: var(--dc);
+  transform: scale(1.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.outer-services-p {
+  width: 70%;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+
+  justify-content: left;
+  align-items: flex-start;
+  background-color: var(--dc);
+  padding: 40px;
+  color: white;
+}
+
+.footer > img {
+  padding: 20px;
+}
+
+.footer-info > p {
+  padding: 5px;
 }

@@ -1,18 +1,17 @@
 
 
-function OurTeam({position, img, name}) {
+function OurTeam({position, img, nombre, experience}) {
   return (
     <div className="our-team-inner">
-        <img src={img} alt="" width={150}/>
 
-        <p>{name}</p>
+
+        <img src={img} alt="" width={240}/>
+
+        <div className="member-text">
+
+        <p>{nombre}</p>
         <p>{position}</p>
-
-        <div className="our-team-social-media">
-
-        <a href=""><i className="fa-brands fa-instagram"></i></a>
-        <a href=""><i className="fa-brands fa-facebook"></i></a>
-        <a href=""><i className="fa-brands fa-linkedin"></i></a>
+        <p>{experience}</p>
         </div>
     </div>
   )

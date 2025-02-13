@@ -6,6 +6,8 @@ import WhatsappChatBot from "../Components/WhatsappChatBot"
 import { useContext } from "react"
 import { BotContext } from "../Context/BotToggle"
 import Chat from "../Components/Chat"
+import OverNav from "../Components/OverNav"
+import Footer from "../Components/Footer"
 
 const servicios = serviciosGenerales.map(servicio => {
   return <ServiciosGenerales
@@ -23,15 +25,24 @@ function ServicesPages() {
 
   return (
     <>
+
+    <OverNav />
+
     <Nav />
 
-    <Hero />
+    {/* <Hero /> */}
 
+    
+    <p style={{fontSize: 32, textAlign: 'center', padding: 50}}>Servicios que les ofrecemos</p>
+    <p className="outer-services-p">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus purus ex. Nam molestie est et arcu mollis mattis. Pellentesque congue pulvinar magna, ut porttitor libero finibus consectetur. Curabitur bibendum a sem eu fringilla. Nunc et neque fermentum ligula lobortis lobortis nec eu nisl. Fusce in finibus sem.</p>
     <div className="outer-general-services">
     {servicios}
     </div>
 
     {toggle ? <Chat /> : <WhatsappChatBot />}
+
+    <Footer />
 
     </>
   )

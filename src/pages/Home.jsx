@@ -4,7 +4,6 @@ import { services } from '../data/services'
 import Services from '../Components/Services'
 import { nanoid } from 'nanoid'
 import AboutUs from '../Components/AboutUs'
-import OurTeamSlider from '../Components/OurTeamSlider'
 import Counter from '../Components/Counter'
 import { numbers } from '../data/quantities'
 import { preguntas } from '../data/faq'
@@ -16,6 +15,8 @@ import Chat from '../Components/Chat'
 import { useContext } from 'react'
 import { BotContext } from '../Context/BotToggle'
 import building from '../assets/numberBuildings.jpg'
+import OverNav from '../Components/OverNav'
+import Footer from '../Components/Footer'
 
 function Home() {
 
@@ -51,6 +52,7 @@ function Home() {
 
   return (
     <>
+      <OverNav />
       <Nav />
       <Hero />
 
@@ -81,6 +83,8 @@ function Home() {
       </section>
 
       {toggle ? <Chat /> : <WhatsappChatBot />}
+
+      <Footer />
 
     </>
   )
