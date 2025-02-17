@@ -66,7 +66,7 @@ function Home() {
       <div className='numbers'>
       {numeros}
 
-      <img src={building} alt="" width={600}/>
+      <img src={building} alt="" width={720} style={{borderRadius: 10}}/>
       </div>
 
 

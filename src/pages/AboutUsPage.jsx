@@ -78,9 +78,6 @@ function AboutUsPage() {
       </section>
 
 
-  
-
-
       <div className="timeline-container">
         <h1 style={{textAlign: "center"}}>Nuestra Historia</h1>
         <Timeline events={events} />

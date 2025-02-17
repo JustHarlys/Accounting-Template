@@ -143,6 +143,7 @@ figure {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  height: 60px;
   background-color: #fff;
 
   /* Sombra más visible solo en la parte inferior */
@@ -312,60 +313,16 @@ figure {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #6491DE; /* 🔹 Mismo color del botón */
+  background-color: #6491DE; 
   color: white;
   transition: background 0.3s ease;
+  width: 40%;
+  margin: auto;
 }
 
 .about-us-text button:hover {
-  background-color: #073D7F; /* 🔹 Color más oscuro en hover */
+  background-color: #073D7F; 
 }
-
-
-.indicators {
-  margin-top: 10px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px;
-  background-color: #bbb;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.5s;  
-}
-
-.dot.active {
-  background-color: var(--dc);
-}
-
-.slider-btn {
-  padding: 10px;
-  color: var(--unblue);
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s ease all;
-  font-size: 50px;
-}
-
-.slider-btn:hover {
-  color: var(--dc);
-}
-
-.our-team-social-media {
-  display: flex;
-  gap: 20px;
-}
-
-.our-team-social-media > a > i {
-  font-size: 20px;
-  transition: 0.5s ease all;
-}
-
 
 .fa-facebook {
   color: #3B5998;
@@ -401,6 +358,7 @@ figure {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 
 .data-number-inner > p {
@@ -644,6 +602,8 @@ figure {
   transition: 0.5s ease all;
   color: white;
   cursor: pointer;
+  width: 40%;
+  margin: auto;
 }
 
 .inner-service-btn:hover {
@@ -697,4 +657,37 @@ figure {
 
 .footer-info > p {
   padding: 5px;
+}
+
+.contact-form {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form > form {
+  background-image: url('./assets/template.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  position: relative;
+}
+
+/* Agrega un efecto de transparencia */
+.form > form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Ajusta la opacidad aquí */
+  z-index: 1;
+}
+
+/* Para que el contenido se vea encima del overlay */
+.form > form * {
+  position: relative;
+  z-index: 2;
 }
